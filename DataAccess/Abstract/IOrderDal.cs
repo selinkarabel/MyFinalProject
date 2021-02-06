@@ -6,7 +6,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface ICustomerDal : IEntityRepository<Customer>
+    //will be in/carry sql statements
+    public interface IOrderDal:IEntityRepository<Order>
     {
     }
 }

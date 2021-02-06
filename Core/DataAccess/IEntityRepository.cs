@@ -1,10 +1,11 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+//Core layer does not reference other layers.. Because core layer is undependent.
+namespace Core.DataAccess
 {
     //dont forget to make it public
 
