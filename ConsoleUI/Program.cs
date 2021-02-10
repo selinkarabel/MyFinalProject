@@ -30,10 +30,20 @@ namespace ConsoleUI
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
 
-            foreach (var product in productManager.GetProductDetails()) //.GetByUnitPrice(40,100)
+            var result = productManager.GetProductDetails();
+
+            if(result.Success)
             {
-                Console.WriteLine(product.ProductName + " / " + product.CategoryName);
+                foreach (var product in productManager.GetProductDetails().Data) //.GetByUnitPrice(40,100)
+                {
+                    Console.WriteLine(product.ProductName + " / " + product.CategoryName);
+                }
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+
         }
     }
 }
