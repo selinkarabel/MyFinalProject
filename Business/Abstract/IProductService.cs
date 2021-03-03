@@ -1,4 +1,4 @@
-﻿using Core.Utilities.Results;
+﻿ using Core.Utilities.Results;
 using Entities.Concrete;
 using Entities.DTOs;
 using System;
@@ -16,5 +16,6 @@ namespace Business.Abstract
         IDataResult<Product> GetById(int productId);
         IResult Add(Product product);
         IResult Update(Product product);
+        IResult AddTransactionalTest(Product product);
     }
 }
